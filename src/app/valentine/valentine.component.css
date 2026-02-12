@@ -1,0 +1,132 @@
+.valentine-container {
+  text-align: center;
+  color: white;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.buttons {
+  position: relative;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.yes-btn {
+  background: white;
+  color: #ff4d6d;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.yes-btn:hover {
+  transform: scale(1.1);
+  background: #ffe6ec;
+}
+
+.no-btn {
+  background: #444;
+  color: white;
+  position: absolute;
+}
+
+.no-btn:hover {
+  transform: scale(1.05);
+}
+
+
+.hearts {
+  font-size: 3rem;
+  animation: pop 0.5s ease forwards;
+}
+
+.heart {
+  position: absolute;
+  animation: floatUp 3s linear infinite;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+}
+
+@keyframes pop {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6); /* keep dark overlay for drama */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s ease;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: rgba(255, 77, 109, 0.95); /* deep pink/red to match theme */
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  width: 350px;
+  border: 2px solid #ff758c; /* subtle border to pop */
+  animation: scaleUp 0.4s ease;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 15px;
+  margin: 15px 0;
+}
+
+.modal-content button {
+  background: white;
+  color: #ff4d6d;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-content button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.7); }
+  to { transform: scale(1); }
+}

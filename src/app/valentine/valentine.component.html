@@ -1,0 +1,32 @@
+<div class="valentine-container">
+
+  <h1 *ngIf="!accepted">Would you be my Valentine date? 💌</h1>
+
+  <div *ngIf="!accepted" class="buttons">
+    <button class="yes-btn" (click)="sayYes()">YES 💖</button>
+
+    <button
+      class="no-btn"
+      (mouseenter)="moveButton()"
+        (touchstart)="moveButton()"
+      #noButton>
+      NO 😏
+    </button>
+  </div>
+
+  <!-- After YES -->
+  <div *ngIf="accepted" class="hearts">
+    <h2>I knew it! I love you Marooshty 💞</h2>
+    <div class="heart" *ngFor="let heart of hearts">❤️</div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" *ngIf="showModal">
+    <div class="modal-content">
+      <h3>Stop messing with me 😼</h3>
+      <img src="assets/cat.gif" alt="cat with gun" />
+      <button (click)="closeModal()">Okay okay 😅</button>
+    </div>
+  </div>
+
+</div>

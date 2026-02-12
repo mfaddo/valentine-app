@@ -1,0 +1,32 @@
+<div class="login-wrapper">
+
+  <div class="login-card">
+
+    <h1>For Marooshty Only 💖</h1>
+    <p class="subtitle">Enter the secret code</p>
+
+    <div class="input-group">
+      <input 
+        type="text" 
+        placeholder="Username"
+        [(ngModel)]="username"
+      />
+    </div>
+
+    <div class="input-group">
+      <input 
+        type="password" 
+        placeholder="Password"
+        [(ngModel)]="password"
+      />
+    </div>
+
+    <button (click)="login()">Unlock My Heart 💘</button>
+
+    <p class="error" *ngIf="error">
+      Hmm... that's not my Marooshty 😒
+    </p>
+
+  </div>
+
+</div>
