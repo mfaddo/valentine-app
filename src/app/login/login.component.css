@@ -3,36 +3,39 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px; /* added padding for small screens */
 }
 
 .login-card {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  padding: 50px 40px;
-  border-radius: 30px;
-  width: 360px;
+  padding: 40px 30px; /* slightly smaller padding for mobile */
+  border-radius: 25px; /* slightly smaller radius */
+  width: 100%;
+  max-width: 360px; /* ensures it doesn’t stretch on mobile */
   text-align: center;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
   color: white;
   animation: fadeIn 1s ease-in-out;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
 }
 
 .login-card h1 {
   margin-bottom: 10px;
-  font-size: 26px;
+  font-size: 24px; /* slightly smaller on mobile */
   font-weight: 600;
 }
 
 .subtitle {
-  font-size: 14px;
+  font-size: 13px; /* smaller for mobile */
   opacity: 0.85;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .input-group {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 input {
@@ -74,7 +77,7 @@ button:hover {
 }
 
 .error {
-  margin-top: 15px;
+  margin-top: 10px; /* smaller spacing on mobile */
   font-size: 13px;
   color: #fff;
   animation: shake 0.3s ease;
@@ -92,4 +95,31 @@ button:hover {
   50% { transform: translateX(-5px); }
   75% { transform: translateX(5px); }
   100% { transform: translateX(0); }
+}
+
+/* 🌸 MOBILE RESPONSIVE */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+
+  .login-card h1 {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  input {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
 }
